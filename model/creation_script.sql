@@ -1,0 +1,4 @@
+CREATE TABLE `desafio-backend-ii`.`clientes` (`id` INT(10) NOT NULL AUTO_INCREMENT , `nome` VARCHAR(255) NOT NULL , `sobrenome` VARCHAR(255) NOT NULL , `email` VARCHAR(255) NOT NULL , `idade` INT(3) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `desafio-backend-ii`.`produtos` (`id` INT(10) NOT NULL AUTO_INCREMENT , `nome` VARCHAR(255) NOT NULL , `descricao` VARCHAR(255) NOT NULL , `preco` DECIMAL(10,2) NOT NULL , `data_atualizado` DATETIME NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `desafio-backend-ii`.`usuarios` (`id` INT(10) NOT NULL AUTO_INCREMENT , `usuario` VARCHAR(255) NOT NULL , `senha` VARCHAR(255) NOT NULL , `token` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `desafio-backend-ii`.`tokens_invalidos` (`token` VARCHAR(255) , `data_inclusao` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`token`)) ENGINE = InnoDB; 
