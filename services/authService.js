@@ -14,7 +14,7 @@ const authenticateUser = async (usuario, senha) => {
       const user = results[0];
 
       if (user.senha === senha) {
-        const token = jwt.sign({ id: user.id }, secret, { expiresIn: 300 });
+        const token = jwt.sign({ id: user.id }, secret, { expiresIn: 1200 });
 
         // Armazena o token no banco de dados
         await connection.execute('UPDATE usuarios SET token = ? WHERE id = ?', [token, user.id]);
